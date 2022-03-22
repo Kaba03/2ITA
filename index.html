@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Test Site!</title>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{url_for('index')}}">
+          <img src="https://www.coditt.com/images/LogoPlaceholder.png" alt="Logo" style="width:40px;" class="rounded-pill d-inline-block align-text-center">
+          GangParty
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('news')}}">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('forum')}}">Forum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('download')}}">Download</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-secondary" href="{{ link }}">{{ action }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid bg-light ps-0 pe-0" style="padding-top: 66px;">
+      <img src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg" alt="Image Not Found" class="img-fluid">
+    </div>
+
+    <div class="container-lg bg-light pb-0 ps-0 pe-0">
+      <video autoplay muted loop class="rounded-3 p-5" style="width: 100%; height: auto;">
+        <source src="{{url_for('static', filename='trailerPlaceholder.mp4')}}" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="container-fluid ps-0 pe-0 bg-light">
+      <div class="row m-0">
+        <div class="col-lg-7 p-5">
+          <img class="rounded-3 img-fluid border-dark" src="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Image Not Found">
+        </div>
+        <div class="col-lg-5 p-5 text-dark d-flex">
+          <p class="align-self-center">      
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend diam vitae erat blandit, 
+            sed sodales nunc vulputate. Donec consectetur volutpat ex, eget vestibulum dui dignissim vel. Integer 
+            porta, dolor vitae vestibulum fermentum, nibh ante scelerisque velit, et facilisis turpis lectus id odio. 
+            Phasellus ullamcorper nisi sed quam tincidunt, sit amet pellentesque urna cursus. Mauris ex nibh, tempus 
+            nec tellus nec, mattis eleifend lectus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-md bg-light p-5 ps-0 pe-0 m-0 mx-auto">
+      <div class="row m-0 text-center">
+        <p class="col h1">News</p>
+      </div>
+      <div class="row m-0 justify-content-evenly">
+        <div class="col-lg-4 p-3">
+          <img class="rounded-3 img-fluid img-thumbnail" src="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Image Not Found">
+          <p class="text-center p-3 h5">Latest Release</p>
+        </div>
+        <div class="col-lg-4 p-3">
+          <img class="rounded-3 img-fluid img-thumbnail" src="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Image Not Found">
+          <p class="text-center p-3 h5">Latest Release</p>
+        </div>
+        <div class="col-lg-4 p-3">
+          <img class="rounded-3 img-fluid img-thumbnail" src="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Image Not Found">
+          <p class="text-center p-3 h5">Latest Release</p>
+        </div>
+      </div>
+      <div class="row m-0 text-center justify-content-center">
+        <a class="w-auto btn btn-outline-secondary" href="{{url_for('news')}}">More News</a>
+      </div>
+    </div>
+    <div class="container-md bg-light mb-5 ps-0 pe-0 mx-auto text-center justify-content-center">
+      <p class="h1 p-3">Download</p>
+      <img class="w-75 h-auto rounded-3 img-fluid mb-4" src="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Image Not Found">
+      <p class="w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend diam vitae erat blandit, 
+        sed sodales nunc vulputate. Donec consectetur volutpat ex, eget vestibulum dui dignissim vel.</p>
+      <a class="w-auto btn btn-outline-secondary" href="{{url_for('download')}}">Download</a>
+    </div>
+    <div class="container-md bg-light ps-0 pe-0 mx-auto text-center justify-content-center">
+      <div class="row">
+        <p class="h1 p-3">About Us</p>
+      </div>
+      <div class="row mb-5">
+        <div class="col-lg-5 mx-auto">
+          <img class="rounded-3 img-fluid" src="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Image Not Found">
+        </div>
+        <div class="col-lg-5 mx-auto d-flex">
+          <p class="mx-auto align-self-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend diam vitae erat blandit, 
+            sed sodales nunc vulputate. Donec consectetur volutpat ex, eget vestibulum dui dignissim vel. Integer 
+            porta, dolor vitae vestibulum fermentum, nibh ante scelerisque velit, et facilisis turpis lectus id odio. 
+            Phasellus ullamcorper nisi sed quam tincidunt, sit amet pellentesque urna cursus. Mauris ex nibh, tempus 
+            nec tellus nec, mattis eleifend lectus.
+          </p>
+        </div>
+      </div>
+      <div class="row m-5">
+        <div class="col">
+          <img class="rounded-pill h-auto m-2" src="{{url_for('static', filename='discordLogo.jpg')}}" alt="Image Not Found" style="width: 40px;">
+          <img class="rounded-pill h-auto m-2" src="{{url_for('static', filename='youtubeLogo.png')}}" alt="Image Not Found" style="width: 40px;">
+          <img class="rounded-pill h-auto m-2" src="{{url_for('static', filename='twitterLogo.png')}}" alt="Image Not Found" style="width: 40px;">
+        </div>
+      </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>

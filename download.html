@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        a{
+            color:brown 
+        }
+        li{
+            margin:-4px;
+            ;
+        }
+        @media only screen and (max-width: 1000px) {
+        li{
+            margin:0px;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    </style>
+</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Download</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{url_for('index')}}">
+          <img src="https://www.coditt.com/images/LogoPlaceholder.png" alt="Logo" style="width:40px;" class="rounded-pill d-inline-block align-text-center">
+          GangParty
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" style="margin:4px;" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="margin:4px;" href="{{url_for('news')}}">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="margin:4px;" href="#">Forum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="margin:4px;" href="{{url_for('download')}}">Download</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto" margin:2px;>
+            <li class="nav-item" >
+                <span><a  class="navbar-brand"style="bs" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-l"></i></a></span>
+            </li>
+            <li class="nav-item">
+                <span><a class="navbar-brand" href="https://www.discord.com" target="_blank"><i class="fab fa-discord fa-l"></i></a></span>
+            </li>
+            <li class="nav-item">
+                <span><a class="navbar-brand" href="https://www.facebook.com"target="_blank"><i class="fab fa-facebook fa-l"></i></a></span>
+            </li>
+            <li class="nav-item">
+                <span style="width: 30px;"><a class="navbar-brand" href="https://www.youtube.com"target="_blank"><i class="fab fa-youtube fa-l"></i></a></span>
+            </li>
+            <li class="nav-item">
+            
+              <a class="nav-link btn btn-outline-secondary" href="{{url_for('login')}}">Login</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </nav>
+    <div class="container mt-5">
+        <div class="row"></div>
+
+            <h1></h1>
+            <h1></h1>
+            <br>
+            <h1 style="text-align: center;">Download</h1>
+
+          <div class="col">
+
+            <img src="{{url_for('static', filename='gangbeast.jpg')}}" class="float-start" width="900px" height="600px" >
+            
+          </div>
+          <div class="col">
+
+            <br>
+            <h3 >Requirements</h3> <br>
+
+            <p style="font-size: 23px;">- OS: 64-bit Windows 10 <br>
+                - Processor(Intel): I5 6500K <br> 
+                - Processor(AMD): AMD FX-8350 <br>
+                - Memory: 8GB RAM <br>
+                - Graphics card(NVIDIA): NVIDIA GeForce GTX  1050/NVIDIA GeForce GTX 660 2GB <br>
+                - Graphics card(AMD): AMD RADEON RX560/HD 7850 2GB <br>
+                - Available disc space: 20GB</p> <br>
+                <button type="button" class="btn btn-light" style=font-size:30px;>Download here</button>
+
+          </div> 
+        </div>
+      </div>
+  </body>
+</html>
